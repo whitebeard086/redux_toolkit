@@ -6,8 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import App from "./App";
 import { fetchUsers } from "./features/users/usersSlice";
+import { fetchPosts } from "./features/posts/postsSlice";
 import "./index.css";
 
+store.dispatch(fetchPosts());
 store.dispatch(fetchUsers());
 
 ReactDOM.render(
